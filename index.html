@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EduTrack, prototip interactiv pentru gestionarea cursurilor și a progresului academic.">
+    <meta name="theme-color" content="#102a43">
+    <title>EduTrack | Teza de an</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="loginScreen" class="login-screen">
+    <div class="login-shell">
+        <div class="login-brand-panel">
+            <div class="brand-lockup">
+                <span class="brand-mark">E</span>
+                <span>EduTrack</span>
+            </div>
+
+            <div class="brand-copy">
+                <h1>Învățarea <span>devine vizibilă.</span></h1>
+            </div>
+        </div>
+
+        <div class="login-form-panel">
+            <div class="login-heading">
+                <h2>Intră în cont</h2>
+            </div>
+
+            <form id="loginForm" class="login-form" novalidate>
+                <fieldset class="role-fieldset">
+                    <legend>Tipul contului</legend>
+                    <div class="role-switch">
+                        <label class="role-option">
+                            <input type="radio" name="role" value="student" required>
+                            <span class="role-option-content"><span class="role-icon" aria-hidden="true">S</span><strong>Student</strong></span>
+                        </label>
+                        <label class="role-option">
+                            <input type="radio" name="role" value="teacher" required>
+                            <span class="role-option-content"><span class="role-icon" aria-hidden="true">T</span><strong>Teacher</strong></span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-grid-two">
+                    <label class="input-group">
+                        <span>Prenume</span>
+                        <input id="loginFirstName" name="first_name" type="text" autocomplete="given-name" placeholder="Prenumele tău" required>
+                    </label>
+                    <label class="input-group">
+                        <span>Nume</span>
+                        <input id="loginLastName" name="last_name" type="text" autocomplete="family-name" placeholder="Numele tău" required>
+                    </label>
+                </div>
+
+                <label class="input-group">
+                    <span>IDNP</span>
+                    <span class="password-control">
+                        <input id="loginIdnp" name="idnp" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Introdu IDNP-ul" required>
+                        <button class="password-toggle" type="button" data-toggle-password aria-label="Afișează IDNP-ul">Arată</button>
+                    </span>
+                </label>
+
+                <div id="loginError" class="form-message form-message-error" role="alert" hidden></div>
+                <button class="primary-button button-wide" type="submit">Intră în cont <span aria-hidden="true">-&gt;</span></button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<section id="appScreen" class="app-screen" hidden>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-brand brand-lockup"><span class="brand-mark">E</span><span>EduTrack</span></div>
+        <div class="sidebar-caption">SPAȚIUL MEU</div>
+        <nav id="mainNav" class="main-nav" aria-label="Navigare principală"></nav>
+        <div class="sidebar-bottom">
+            <button id="sidebarLogout" class="sidebar-logout" type="button"><span>↪</span> Ieșire din cont</button>
+        </div>
+    </aside>
+
+    <div class="app-body">
+        <header class="app-topbar">
+            <button id="mobileMenuButton" class="mobile-menu-button" type="button" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
+            <div class="topbar-context"><span class="topbar-context-title">EduTrack</span><span class="topbar-context-separator">/</span><span id="topbarPageName">Panou</span></div>
+            <div class="topbar-user">
+                <div id="userAvatar" class="user-avatar">IR</div>
+                <div class="topbar-user-copy"><strong id="topbarUserName">Ion Rusu</strong><span id="topbarUserRole">Student</span></div>
+                <button id="topbarLogout" class="topbar-logout" type="button">Ieșire</button>
+            </div>
+        </header>
+        <main id="appContent" class="app-content"></main>
+    </div>
+</section>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
