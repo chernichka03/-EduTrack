@@ -2,7 +2,8 @@
 
 EduTrack - интерактивный frontend-прототип учебной платформы для управления курсами, заданиями, ответами и прогрессом студентов.
 > **Ссылка на сайт:** [Открыть EduTrack](https://chernichka03.github.io/-EduTrack/)
-><img src="https://raw.githubusercontent.com/chernichka03/-EduTrack/main/edutrack-login.png" alt="EduTrack Login Screen" width="600" />
+ <img src="https://raw.githubusercontent.com/chernichka03/-EduTrack/main/edutrack-login.png" alt="EduTrack Login Screen" width="600" />
+> 
 Проект подготовлен для демонстрации практической части Teza de an. Текущая версия реализована только на HTML, CSS и JavaScript. Серверная часть, PHP, MySQL и регистрация пользователей пока не используются.
 
 ## Возможности
